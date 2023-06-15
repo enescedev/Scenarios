@@ -21,6 +21,6 @@
         "uilayout": "editor-terminal"
     },
     "backend": {
-        "imageid": "alpine"
+        "imageid": "ubuntu"
     }
 }
