@@ -1,4 +1,4 @@
-## PostgreSQL Install and Configure on Alpine Linux using RPM
+## PostgreSQL Install 
 
 ### Step 1: Update the System
 The first step is to update the system and install the required dependencies:

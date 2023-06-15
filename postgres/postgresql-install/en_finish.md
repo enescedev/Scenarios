@@ -1,4 +1,4 @@
-### Postgresql Installation and Configure Completed  
+### Postgresql Installation Completed  
   
 You completed scenario respectively. 👏🏻
 Click Finish button to close session.  
