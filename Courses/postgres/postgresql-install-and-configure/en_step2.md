@@ -1,19 +1,31 @@
-### Step 4: Configure PostgreSQL
-After installing PostgreSQL, you need to create a new database cluster and configure it. Use the following commands to initialize the database and start the PostgreSQL server:
-```sudo mkdir /run/postgresql```
-```sudo chown postgres:postgres /run/postgresql```
-```sudo -u postgres initdb -D /var/lib/postgresql/13/data```
-```sudo -u postgres pg_ctl -D /var/lib/postgresql/13/data -l logfile start```
+### STEP 4: Configure PostgreSQL.
+
+After installing PostgreSQL, you need to create and configure a new database cluster. Use the following commands to start the database and start the PostgreSQL server:
+You can check the status of the postgresql service and start the postgresql service with the following command;
+``sh
+service postgresql status
+service postgresql start
+```
+### STEP 5: Configuring PostgreSQL to Autostart
+By default PostgreSQL is not set to start automatically on boot. Use the following command to enable it:
+``sh
+service postgresql enable
+```
+You can check the postgresql user information with the following command;
+``sh
+id postgres
+```
+You can use the following command to switch to postgres user;
+``sh
+su - postgres
+```
 
 
-### Step 5: Configure PostgreSQL to Start Automatically
-By default, PostgreSQL is not set to start automatically on boot. To enable this, use the following command:
-```sudo rc-update add postgresql```
-
-### Step 6: Verify PostgreSQL Installation
+### STEP 6: Verify PostgreSQL Installation
 You can verify the installation by connecting to the PostgreSQL server using the following command:
-```psql -U postgres```
+``sh
+psql
+```
+-This command will launch the PostgreSQL prompt. You can now create a new database and start using PostgreSQL.
 
--This will launch the PostgreSQL command prompt. You can now create a new database and start using PostgreSQL.
-
--Congratulations, you have successfully installed and configured PostgreSQL on Alpine Linux using RPM package manager.
+-Congratulations, you have successfully installed and configured PostgreSQL on Ubuntu Linux.

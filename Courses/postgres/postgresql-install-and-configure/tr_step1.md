@@ -1,23 +1,27 @@
-# Postgresql Kurulumu  
+## Postgresql Kurulumu  
 
-## Bu Senaryoda Alpine imajına Postgresql kurulumunu göreceğiz. 
+### Bu Senaryoda Ubuntu imajına Postgresql kurulumunu göreceğiz. 
 
 ### ADIM 1: Sistemi Güncelle
 İlk adım, sistemi güncellemek ve gerekli bağımlılıkları kurmaktır:
-```sudo apk update```
-```sudo apk upgrade```
-```sudo apk add ca-certificates wget```
+```sh
+apt update
+apt install -y ca-certificates openssh-client wget iptables tzdata \
+    && rm -rf /var/lib/apt/list/*
+```
 
-### ADIM 2: PostgreSQL RPM Deposu Ekleyin
+### ADIM 2: PostgreSQL RPM Deposu Ekleyin 
 Ardından, PostgreSQL RPM deposunu sisteminize ekleyin:
-```docker pull postgres```
-```sudo wget -O /etc/apk/keys/postgresql.asc https://www.postgresql.org/media/keys/ACCC4CF8.asc```
-```sudo sh -c 'echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories'```
-```sudo sh -c 'echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories'```
-```sudo sh -c 'echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories'```
-- Bu komut, güncel Postgres imajını indirir.
+```sh
+apt install -y ca-certificates wget gnupg lsb-release
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor -o /usr/share/keyrings/postgresql-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/postgresql-archive-keyring.gpg] http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" | tee /etc/apt/sources.list.d/pgdg.list 
+```
+
 
 ### ADIM 3: PostgreSQL'i Kurun
 Artık aşağıdaki komutu kullanarak PostgreSQL'i kurabilirsiniz:
-```sudo apk add postgresql```
-- Bu komut, 
+```sh
+apt update
+apt install -y postgresql-14 \
+    && rm -rf /var/lib/apt/list/*
+```
