@@ -20,7 +20,6 @@ postgres user'ına geçiş yapmak için aşağıdaki komutu kullanabilirsin;
 su - postgres
 ```
 
-
 ### ADIM 6: PostgreSQL Kurulumunu Doğrulayın
 Aşağıdaki komutu kullanarak PostgreSQL sunucusuna bağlanarak kurulumu doğrulayabilirsiniz:
 ```sh

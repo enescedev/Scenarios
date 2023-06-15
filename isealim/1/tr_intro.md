@@ -1,0 +1,1 @@
+Merhaba! İşe alım sürecinde bir sınava tabi tutulacaksınız. İşle ilgili iki soruyla karşılaşacaksınız. Soruları dikkatlice okuyun ve doğru cevapları uygulayın. Başlamak için 'Devam' yazın.

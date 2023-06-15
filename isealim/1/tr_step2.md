@@ -1,0 +1,1 @@
+Soru 2: KarmaşıkElimizdeki tablo ve verilere göre, ismi ve soyadında sadece tek bir "o" harfi geçen çalışanımızın, sadece Almanya'da yaşayan müşterilere yaptığımız satışları raporlamamız gerekiyor. Çalışanın adı ve soyadı tek bir sütunda yer almalı ve aralarında 1 boşluk olmalıdır. Bu raporu nasıl hazırlayabiliriz? 

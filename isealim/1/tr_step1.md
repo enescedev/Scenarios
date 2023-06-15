@@ -1,0 +1,1 @@
+Soru 1: Elimizdeki tablo ve verilere göre, 100'den fazla ürün satışı yaptığımız tüm müşterilerin isimleri ve toplam satış miktarlarıyla ilgili bir rapor tasarlamamız gerekiyor. Bu raporu nasıl hazırlayabiliriz?
