@@ -1,0 +1,7 @@
+{
+    "command": [
+      "sh",
+      "-c",
+      "cmp -s /tmp/cevap1 /dev/text1 && echo 'cevap1 dosyası doğru.' || echo 'cevap1 dosyası yanlış.'; cmp -s /tmp/cevap2 /dev/text2 && echo 'cevap2 dosyası doğru.' || echo 'cevap2 dosyası yanlış.'"
+    ]
+}
